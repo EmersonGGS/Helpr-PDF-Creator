@@ -61,18 +61,44 @@
     [self setupPDFDocumentNamed:@"NewPDF" Width:2550 Height:3300];
     
     [self beginPDFPage];
-    
-    
-    
-    CGRect textRect = [self addText:@"HELPR!"
-                          withFrame:CGRectMake(kPadding, kPadding, 400, 200) fontSize:62.0f];
 
+    //header bg bar
     CGRect headerDivider = [self addLineWithFrame:CGRectMake(0, 0, _pageSize.width, 450)
                                        withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
-    
+    //header HELPR img
     UIImage *anImage = [UIImage imageNamed:@"helpr-logo.png"];
     CGRect imageRect = [self addImage:anImage
                               atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), kPadding)];
+    //School name
+    CGRect schoolTitleRect = [self addText:@"Emerson George Stewart"
+                                 withFrame:CGRectMake(kPadding+10, (imageRect.origin.y+imageRect.size.height+kPadding), (_pageSize.width/2), 150) fontSize:72.0f];
+    //Student's name
+    CGRect studentTitleRect = [self addText:@"Walkerton District Secondary School"
+                                  withFrame:CGRectMake(kPadding+10, (schoolTitleRect.origin.y+schoolTitleRect.size.height+kPadding), (_pageSize.width/2), 150) fontSize:68.0f];
+    //Hours title
+    CGRect hoursTitleRect = [self addText:@"Volunteer Work Completed"
+                                withFrame:CGRectMake((kPadding+10), (studentTitleRect.origin.y+studentTitleRect.size.height+kPadding+60), 400, 200) fontSize:62.0f];
+    
+    
+    //TABLE HEADINGS
+    //Job Heading
+    CGRect jobsHeadingRect = [self addText:@"Job Title"
+                                withFrame:CGRectMake((kPadding+120), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+60), 100, 250) fontSize:62.0f];
+    //Employer Heading
+    CGRect employerHeadingRect = [self addText:@"Employer"
+                                withFrame:CGRectMake((jobsHeadingRect.origin.x + jobsHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
+    //Hours Heading
+    CGRect hoursHeadingRect = [self addText:@"Hours"
+                                withFrame:CGRectMake((employerHeadingRect.origin.x + employerHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
+    //Date Heading
+    CGRect dateHeadingRect = [self addText:@"Date"
+                                withFrame:CGRectMake((hoursHeadingRect.origin.x + hoursHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
+    //Phone Heading
+    CGRect phoneHeadingRect = [self addText:@"Phone Number"
+                                 withFrame:CGRectMake((dateHeadingRect.origin.x + dateHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
+    //Signature Heading
+    CGRect signatureHeadingRect = [self addText:@"Signature"
+                                withFrame:CGRectMake((phoneHeadingRect.origin.x + phoneHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
     
     //CGRect imageRect = [self addImage:anImage atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), headerDivider.origin.y + headerDivider.size.height + kPadding)];
     

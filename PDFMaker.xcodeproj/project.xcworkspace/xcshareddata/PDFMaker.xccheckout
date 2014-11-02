@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF502CF5-EE2E-4528-93FF-250F5EBB9137</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PDFMaker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F3AEDC0D-194F-4ED4-9FBE-BC148FA7A76D</key>
+		<string>https://github.com/EmersonGGS/Helpr-PDF-Creator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PDFMaker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F3AEDC0D-194F-4ED4-9FBE-BC148FA7A76D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/EmersonGGS/Helpr-PDF-Creator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F3AEDC0D-194F-4ED4-9FBE-BC148FA7A76D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F3AEDC0D-194F-4ED4-9FBE-BC148FA7A76D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Helpr-PDF-Creator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
