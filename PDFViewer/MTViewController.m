@@ -38,7 +38,7 @@
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:@"NewPDF.pdf"];
+    NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:@"HelprHours.pdf"];
     
     if([[NSFileManager defaultManager] fileExistsAtPath:pdfPath]) {
         
@@ -83,7 +83,7 @@
     //TABLE HEADINGS
     //Job Heading
     CGRect jobsHeadingRect = [self addText:@"Job Title"
-                                withFrame:CGRectMake((kPadding+120), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+60), 100, 250) fontSize:62.0f];
+                                withFrame:CGRectMake((kPadding+130), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:62.0f];
     //Employer Heading
     CGRect employerHeadingRect = [self addText:@"Employer"
                                 withFrame:CGRectMake((jobsHeadingRect.origin.x + jobsHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
@@ -99,6 +99,56 @@
     //Signature Heading
     CGRect signatureHeadingRect = [self addText:@"Signature"
                                 withFrame:CGRectMake((phoneHeadingRect.origin.x + phoneHeadingRect.size.width + 160), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:58.0f];
+    
+    ///////////////////
+    //TABLE CREATION//
+    /////////////////
+    
+    //Top Line
+    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y-15, (_pageSize.width-320), 8)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Top Line - Inside
+    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y+jobsHeadingRect.size.height+15, (_pageSize.width-320), 5)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Left Line
+    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y+985, 8, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    
+    //Right Line
+    [self addLineWithFrame:CGRectMake((kPadding+100+_pageSize.width-330), jobsHeadingRect.origin.y+985, 8, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Bottom Line
+    [self addLineWithFrame:CGRectMake((kPadding+100), (jobsHeadingRect.origin.y-15+2000), (_pageSize.width-320), 8)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    ///////////////////
+    //Division Lines//
+    /////////////////
+    
+    //Between Job Title and Employer
+    [self addLineWithFrame:CGRectMake((jobsHeadingRect.origin.x+jobsHeadingRect.size.width+80), jobsHeadingRect.origin.y+985, 5, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Between Employer and Hours
+    [self addLineWithFrame:CGRectMake((employerHeadingRect.origin.x+employerHeadingRect.size.width+80), jobsHeadingRect.origin.y+985, 5, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Between Hours and Date
+    [self addLineWithFrame:CGRectMake((hoursHeadingRect.origin.x+hoursHeadingRect.size.width+80), jobsHeadingRect.origin.y+985, 5, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Between Date and Phone Number
+    [self addLineWithFrame:CGRectMake((dateHeadingRect.origin.x+dateHeadingRect.size.width+80), jobsHeadingRect.origin.y+985, 5, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
+    //Between Phone Number and Signature
+    [self addLineWithFrame:CGRectMake((phoneHeadingRect.origin.x+phoneHeadingRect.size.width+80), jobsHeadingRect.origin.y+985, 5, 2000)
+                 withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    
     
     //CGRect imageRect = [self addImage:anImage atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), headerDivider.origin.y + headerDivider.size.height + kPadding)];
     
